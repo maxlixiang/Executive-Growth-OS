@@ -397,7 +397,65 @@ tests/                 自动化测试
 
 重要状态写入使用临时文件和原子替换。`.env` 与 `.env.local` 已加入 `.gitignore`，API Key 不应进入 Prompt、日志或版本库。
 
-## 最重要的使用原则
+## 如何退出、撤销和检查学习记录
+
+在 Recall 或 Application 回答阶段输入以下任一命令，可安全取消：
+
+```text
+q
+quit
+exit
+/quit
+```
+
+命令大小写不敏感。取消、Ctrl+C、EOF、DeepSeek 错误或未通过最终保存确认，都不会写入 Study Log，也不会更新 `state/knowledge_progress.json`。
+
+AI 完成评估后会先显示 Concept Score、Application Score、Status、Next Review 和反馈，再询问：
+
+```text
+保存本次学习结果？ [Y/n]
+```
+
+只有确认后才正式提交。
+
+查看最近记录：
+
+```powershell
+python -m growthos study history
+python -m growthos study history finance
+```
+
+查看单条完整记录：
+
+```powershell
+python -m growthos study show <id>
+```
+
+将错误记录标记为无效并重新计算该 Concept 的进度：
+
+```powershell
+python -m growthos study invalidate <id>
+```
+
+恢复被作废的记录：
+
+```powershell
+python -m growthos study restore <id>
+```
+
+撤销最近一次有效学习：
+
+```powershell
+python -m growthos study undo
+```
+
+如需从所有有效 Study History 重建 Knowledge Progress：
+
+```powershell
+python -m growthos study rebuild
+```
+
+系统默认使用 `invalidate` 而不是永久删除，因为错误记录本身也是审计历史。Invalid Session 会保留 `invalidated_at` 和 `invalidated_reason`，但不参与 Knowledge Progress、Spaced Repetition 和 Context Builder 的有效 Study History。## 最重要的使用原则
 
 - 不要为了让 AI 认为自己优秀而包装答案；
 - 不知道就直接说不知道；

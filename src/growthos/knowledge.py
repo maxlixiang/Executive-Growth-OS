@@ -130,10 +130,14 @@ def select_concept(root: Path, capability: str | None = None, concept_id: str | 
 
 def record_result(root: Path, concept: dict, concept_score: int, application_score: int) -> dict:
     path = root / "state/knowledge_progress.json"; progress = read_json(path, {})
-    prior = progress.get(concept["id"], {}); passed = concept_score >= 2 and application_score >= 2
-    streak = prior.get("consecutive_successes", 0) + 1 if passed else 0
-    status = "verified" if concept_score == application_score == 3 else "applied" if passed else "needs_review"
-    today = date.today().isoformat()
-    result = {**prior, "capability": concept["capability"], "status": status, "first_learned_at": prior.get("first_learned_at", today), "last_reviewed_at": today, "next_review_at": next_review_date(concept_score, application_score, streak).isoformat(), "review_count": prior.get("review_count", 0)+1, "consecutive_successes": streak, "last_concept_score": concept_score, "last_application_score": application_score}
+    result = calculate_progress_result(progress.get(concept["id"], {}), concept, concept_score, application_score)
     progress[concept["id"]] = result; atomic_json(path, progress)
     return result
+
+def calculate_progress_result(prior: dict, concept: dict, concept_score: int, application_score: int, reviewed_on: date | None = None) -> dict:
+    """Calculate a progress snapshot without writing it."""
+    passed = concept_score >= 2 and application_score >= 2
+    streak = prior.get("consecutive_successes", 0) + 1 if passed else 0
+    status = "verified" if concept_score == application_score == 3 else "applied" if passed else "needs_review"
+    reviewed_on = reviewed_on or date.today(); reviewed_at = reviewed_on.isoformat()
+    return {**prior, "capability": concept["capability"], "status": status, "first_learned_at": prior.get("first_learned_at", reviewed_at), "last_reviewed_at": reviewed_at, "next_review_at": next_review_date(concept_score, application_score, streak, reviewed_on).isoformat(), "review_count": prior.get("review_count", 0)+1, "consecutive_successes": streak, "last_concept_score": concept_score, "last_application_score": application_score}
