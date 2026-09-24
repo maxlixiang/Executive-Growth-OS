@@ -1,0 +1,39 @@
+capability: Execution
+categories:
+  个人执行: [outcome_vs_output, priority, scope, KPI, OKR]
+  项目规划: [project_charter, milestone, dependency, critical_path, RACI]
+  项目治理: [stakeholder_map, decision_log, change_management, project_governance]
+  风险管理: [risk_vs_issue, risk_register, escalation]
+  跨部门协作: [resource_conflict]
+  复盘改善: [retrospective, root_cause_analysis]
+defaults: &d
+  title_zh: 执行管理概念
+  description: 将复杂事情转化为可管理且可交付的结果。
+  why_it_matters: 结果来自清晰的责任、节奏和风险控制。
+  core_principles: [结果, 依赖, 风险]
+  key_questions: [谁在何时对什么结果负责？]
+  application_questions: [如何推动项目越过当前阻碍？]
+  common_mistakes: [只汇报活动而非结果]
+  prerequisites: []
+  tags: [execution, v1]
+concepts:
+  - {<<: *d, id: outcome_vs_output, title: Outcome vs Output}
+  - {<<: *d, id: priority, title: Priority}
+  - {<<: *d, id: scope, title: Scope}
+  - {<<: *d, id: project_charter, title: Project Charter}
+  - {<<: *d, id: milestone, title: Milestone}
+  - {<<: *d, id: dependency, title: Dependency}
+  - {<<: *d, id: critical_path, title: Critical Path}
+  - {<<: *d, id: stakeholder_map, title: Stakeholder Map}
+  - {<<: *d, id: RACI, title: RACI}
+  - {<<: *d, id: risk_vs_issue, title: Risk vs Issue}
+  - {<<: *d, id: risk_register, title: Risk Register}
+  - {<<: *d, id: decision_log, title: Decision Log}
+  - {<<: *d, id: change_management, title: Change Management}
+  - {<<: *d, id: escalation, title: Escalation}
+  - {<<: *d, id: resource_conflict, title: Resource Conflict}
+  - {<<: *d, id: project_governance, title: Project Governance}
+  - {<<: *d, id: KPI, title: KPI}
+  - {<<: *d, id: OKR, title: OKR}
+  - {<<: *d, id: retrospective, title: Retrospective}
+  - {<<: *d, id: root_cause_analysis, title: Root Cause Analysis}

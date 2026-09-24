@@ -1,0 +1,87 @@
+capability: Finance
+title_zh:
+  income_statement: 利润表
+  balance_sheet: 资产负债表
+  cash_flow_statement: 现金流量表
+  revenue: 收入
+  COGS: 销售成本
+  gross_profit: 毛利润
+  gross_margin: 毛利率
+  operating_expense: 经营费用
+  operating_profit: 营业利润
+  net_profit: 净利润
+  cash_vs_profit: 现金与利润
+  fixed_cost: 固定成本
+  variable_cost: 变动成本
+  contribution_margin: 贡献毛利
+  break_even: 盈亏平衡
+  ROI: 投资回报率
+  ROIC: 投入资本回报率
+  working_capital: 营运资本
+  accounts_receivable: 应收账款
+  accounts_payable: 应付账款
+  inventory_turnover: 存货周转率
+  DSO: 应收账款周转天数
+  DPO: 应付账款周转天数
+  DIO: 存货周转天数
+  cash_conversion_cycle: 现金转换周期
+  budget: 预算
+  forecast: 预测
+  variance_analysis: 差异分析
+  unit_economics: 单位经济模型
+  scenario_analysis: 情景分析
+  NPV: 净现值
+  IRR: 内部收益率
+  opportunity_cost: 机会成本
+  capital_allocation: 资本配置
+categories:
+  财务报表基础: [income_statement, balance_sheet, cash_flow_statement]
+  利润与成本: [revenue, COGS, gross_profit, gross_margin, operating_expense, operating_profit, net_profit, cash_vs_profit]
+  经营分析: [fixed_cost, variable_cost, contribution_margin, break_even, unit_economics]
+  营运资本: [working_capital, accounts_receivable, accounts_payable, inventory_turnover, DSO, DPO, DIO, cash_conversion_cycle]
+  预算与预测: [budget, forecast, variance_analysis, scenario_analysis]
+  投资决策: [ROI, ROIC, NPV, IRR, opportunity_cost, capital_allocation]
+defaults: &default
+  description: 用经营数字理解业务并支持决策。
+  why_it_matters: 让管理判断能够经得起数字与现金检验。
+  core_principles: [定义, 计算, 决策含义]
+  key_questions: [该指标说明什么经营变化？]
+  application_questions: [它将如何改变当前方案？]
+  common_mistakes: [只看利润不看现金]
+  prerequisites: []
+  tags: [finance, v1]
+concepts:
+  - {<<: *default, id: income_statement, title: Income Statement}
+  - {<<: *default, id: balance_sheet, title: Balance Sheet}
+  - {<<: *default, id: cash_flow_statement, title: Cash Flow Statement}
+  - {<<: *default, id: revenue, title: Revenue}
+  - {<<: *default, id: COGS, title: COGS}
+  - {<<: *default, id: gross_profit, title: Gross Profit}
+  - {<<: *default, id: gross_margin, title: Gross Margin, prerequisites: [gross_profit]}
+  - {<<: *default, id: operating_expense, title: Operating Expense}
+  - {<<: *default, id: operating_profit, title: Operating Profit}
+  - {<<: *default, id: net_profit, title: Net Profit}
+  - {<<: *default, id: cash_vs_profit, title: Cash vs Profit}
+  - {<<: *default, id: fixed_cost, title: Fixed Cost}
+  - {<<: *default, id: variable_cost, title: Variable Cost}
+  - {<<: *default, id: contribution_margin, title: Contribution Margin}
+  - {<<: *default, id: break_even, title: Break Even, prerequisites: [fixed_cost, contribution_margin]}
+  - {<<: *default, id: ROI, title: ROI, prerequisites: [operating_profit]}
+  - {<<: *default, id: ROIC, title: ROIC, prerequisites: [ROI, balance_sheet]}
+  - {<<: *default, id: working_capital, title: Working Capital, prerequisites: [accounts_receivable]}
+  - {<<: *default, id: accounts_receivable, title: Accounts Receivable}
+  - {<<: *default, id: accounts_payable, title: Accounts Payable}
+  - {<<: *default, id: inventory_turnover, title: Inventory Turnover}
+  - {<<: *default, id: DSO, title: DSO}
+  - {<<: *default, id: DPO, title: DPO}
+  - {<<: *default, id: DIO, title: DIO}
+  - {<<: *default, id: cash_conversion_cycle, title: Cash Conversion Cycle, prerequisites: [DSO, DPO, DIO]}
+  - {<<: *default, id: budget, title: Budget}
+  - {<<: *default, id: forecast, title: Forecast}
+  - {<<: *default, id: variance_analysis, title: Variance Analysis}
+  - {<<: *default, id: unit_economics, title: Unit Economics, prerequisites: [contribution_margin]}
+  - {<<: *default, id: scenario_analysis, title: Scenario Analysis}
+  - {<<: *default, id: NPV, title: NPV, prerequisites: [cash_flow_statement, opportunity_cost]}
+  - {<<: *default, id: IRR, title: IRR, prerequisites: [NPV]}
+  - {<<: *default, id: opportunity_cost, title: Opportunity Cost}
+  - {<<: *default, id: capital_allocation, title: Capital Allocation, prerequisites: [ROIC, NPV, IRR]}

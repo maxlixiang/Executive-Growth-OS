@@ -1,0 +1,36 @@
+capability: Leadership
+categories:
+  授权与反馈: [delegation, accountability, feedback, coaching, one_on_one]
+  绩效与团队: [performance_management, motivation, role_clarity, span_of_control, management_cadence]
+  冲突与领导: [conflict_management, psychological_safety, situational_leadership, difficult_conversation]
+  人才发展: [talent_development, succession]
+  组织设计: [team_design, decision_rights]
+defaults: &d
+  title_zh: 领导力概念
+  description: 通过他人持续创造结果并使其成长。
+  why_it_matters: 管理者的杠杆来自团队能力而非个人产出。
+  core_principles: [责任, 反馈, 成长]
+  key_questions: [团队因你而变得更强了吗？]
+  application_questions: [你将如何处理这位成员？]
+  common_mistakes: [授权后不提供情境和反馈]
+  prerequisites: []
+  tags: [leadership, v1]
+concepts:
+  - {<<: *d, id: delegation, title: Delegation}
+  - {<<: *d, id: accountability, title: Accountability}
+  - {<<: *d, id: feedback, title: Feedback}
+  - {<<: *d, id: coaching, title: Coaching}
+  - {<<: *d, id: one_on_one, title: One on One}
+  - {<<: *d, id: performance_management, title: Performance Management}
+  - {<<: *d, id: motivation, title: Motivation}
+  - {<<: *d, id: conflict_management, title: Conflict Management}
+  - {<<: *d, id: psychological_safety, title: Psychological Safety}
+  - {<<: *d, id: talent_development, title: Talent Development}
+  - {<<: *d, id: succession, title: Succession}
+  - {<<: *d, id: team_design, title: Team Design}
+  - {<<: *d, id: role_clarity, title: Role Clarity}
+  - {<<: *d, id: span_of_control, title: Span of Control}
+  - {<<: *d, id: situational_leadership, title: Situational Leadership}
+  - {<<: *d, id: difficult_conversation, title: Difficult Conversation}
+  - {<<: *d, id: management_cadence, title: Management Cadence}
+  - {<<: *d, id: decision_rights, title: Decision Rights}

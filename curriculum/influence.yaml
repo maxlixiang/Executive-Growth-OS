@@ -1,0 +1,39 @@
+capability: Influence
+categories:
+  结构化沟通: [structured_communication, framing, storytelling_with_data]
+  管理层沟通: [executive_summary, recommendation, executive_presence, decision_memo]
+  Stakeholder: [stakeholder_mapping, active_listening, coalition_building, cross_function_alignment]
+  影响力: [influence_without_authority, persuasion, objection_handling]
+  谈判: [negotiation, BATNA, ZOPA, anchoring]
+  冲突与向上管理: [conflict_resolution, managing_up]
+defaults: &d
+  title_zh: 影响力概念
+  description: 在没有行政权力时改变关键人的认知与行动。
+  why_it_matters: 高管影响力要求把专业判断转化为共同决策。
+  core_principles: [受众, 框架, 行动]
+  key_questions: [谁需要改变什么行动，为什么？]
+  application_questions: [如何推进这个关键人？]
+  common_mistakes: [用专业正确代替说服]
+  prerequisites: []
+  tags: [influence, v1]
+concepts:
+  - {<<: *d, id: structured_communication, title: Structured Communication}
+  - {<<: *d, id: executive_summary, title: Executive Summary}
+  - {<<: *d, id: recommendation, title: Recommendation}
+  - {<<: *d, id: framing, title: Framing}
+  - {<<: *d, id: stakeholder_mapping, title: Stakeholder Mapping}
+  - {<<: *d, id: influence_without_authority, title: Influence Without Authority}
+  - {<<: *d, id: active_listening, title: Active Listening}
+  - {<<: *d, id: persuasion, title: Persuasion}
+  - {<<: *d, id: negotiation, title: Negotiation}
+  - {<<: *d, id: BATNA, title: BATNA}
+  - {<<: *d, id: ZOPA, title: ZOPA}
+  - {<<: *d, id: anchoring, title: Anchoring}
+  - {<<: *d, id: objection_handling, title: Objection Handling}
+  - {<<: *d, id: coalition_building, title: Coalition Building}
+  - {<<: *d, id: conflict_resolution, title: Conflict Resolution}
+  - {<<: *d, id: executive_presence, title: Executive Presence}
+  - {<<: *d, id: storytelling_with_data, title: Storytelling With Data}
+  - {<<: *d, id: decision_memo, title: Decision Memo}
+  - {<<: *d, id: managing_up, title: Managing Up}
+  - {<<: *d, id: cross_function_alignment, title: Cross Function Alignment}

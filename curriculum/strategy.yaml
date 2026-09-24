@@ -1,0 +1,39 @@
+capability: Strategy
+categories:
+  战略基础: [strategy_vs_plan, trade_off, opportunity_cost, strategic_priority]
+  竞争分析: [competitive_positioning, competitive_advantage, moat, five_forces, market_structure, market_entry]
+  决策: [decision_tree, decision_memo, reversible_decision, irreversible_decision, second_order_effects]
+  情景与风险: [scenario_planning, premortem, strategic_risk, exit_criteria]
+  资源配置: [resource_allocation, portfolio_management]
+defaults: &d
+  title_zh: 战略管理概念
+  description: 在信息不完整、资源有限时进行真实选择。
+  why_it_matters: 战略需要取舍而不是愿望清单。
+  core_principles: [选择, 取舍, 资源配置]
+  key_questions: [放弃了什么？]
+  application_questions: [当前情境中哪个方案更优？]
+  common_mistakes: [把计划当成战略]
+  prerequisites: []
+  tags: [strategy, v1]
+concepts:
+  - {<<: *d, id: strategy_vs_plan, title: Strategy vs Plan}
+  - {<<: *d, id: competitive_positioning, title: Competitive Positioning}
+  - {<<: *d, id: trade_off, title: Trade-off}
+  - {<<: *d, id: opportunity_cost, title: Opportunity Cost}
+  - {<<: *d, id: competitive_advantage, title: Competitive Advantage}
+  - {<<: *d, id: moat, title: Moat}
+  - {<<: *d, id: five_forces, title: Five Forces}
+  - {<<: *d, id: market_entry, title: Market Entry}
+  - {<<: *d, id: market_structure, title: Market Structure}
+  - {<<: *d, id: scenario_planning, title: Scenario Planning}
+  - {<<: *d, id: decision_tree, title: Decision Tree}
+  - {<<: *d, id: decision_memo, title: Decision Memo}
+  - {<<: *d, id: premortem, title: Premortem}
+  - {<<: *d, id: reversible_decision, title: Reversible Decision}
+  - {<<: *d, id: irreversible_decision, title: Irreversible Decision}
+  - {<<: *d, id: resource_allocation, title: Resource Allocation}
+  - {<<: *d, id: portfolio_management, title: Portfolio Management}
+  - {<<: *d, id: strategic_priority, title: Strategic Priority}
+  - {<<: *d, id: strategic_risk, title: Strategic Risk}
+  - {<<: *d, id: exit_criteria, title: Exit Criteria}
+  - {<<: *d, id: second_order_effects, title: Second-order Effects}

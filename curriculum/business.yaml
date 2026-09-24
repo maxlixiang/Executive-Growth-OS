@@ -1,0 +1,44 @@
+capability: Business
+categories:
+  商业模式: [business_model, value_chain, customer_value_proposition]
+  客户与渠道: [customer_segmentation, channels, distributor_model, channel_conflict]
+  盈利模型: [pricing, unit_economics, gross_margin, contribution_margin, cost_structure]
+  竞争优势: [bargaining_power, competitive_advantage, switching_cost, economies_of_scale]
+  供应链: [supply_chain, inventory, demand_forecasting]
+  市场与增长: [market_sizing, TAM_SAM_SOM, customer_acquisition, retention, lifetime_value, business_case]
+defaults: &default
+  title_zh: 商业管理概念
+  description: 理解该商业概念并能用于真实业务判断。
+  why_it_matters: 帮助将专业判断连接到价值创造与经营结果。
+  core_principles: [定义, 驱动因素, 取舍]
+  key_questions: [它如何影响价值和利润？]
+  application_questions: [在当前业务案例中如何使用它？]
+  common_mistakes: [只背定义而不分析业务情境]
+  prerequisites: []
+  tags: [business, v1]
+concepts:
+  - {<<: *default, id: business_model, title: Business Model}
+  - {<<: *default, id: value_chain, title: Value Chain}
+  - {<<: *default, id: customer_segmentation, title: Customer Segmentation}
+  - {<<: *default, id: customer_value_proposition, title: Customer Value Proposition}
+  - {<<: *default, id: channels, title: Channels}
+  - {<<: *default, id: distributor_model, title: Distributor Model}
+  - {<<: *default, id: pricing, title: Pricing}
+  - {<<: *default, id: unit_economics, title: Unit Economics}
+  - {<<: *default, id: gross_margin, title: Gross Margin}
+  - {<<: *default, id: contribution_margin, title: Contribution Margin}
+  - {<<: *default, id: cost_structure, title: Cost Structure}
+  - {<<: *default, id: bargaining_power, title: Bargaining Power}
+  - {<<: *default, id: competitive_advantage, title: Competitive Advantage}
+  - {<<: *default, id: switching_cost, title: Switching Cost}
+  - {<<: *default, id: economies_of_scale, title: Economies of Scale}
+  - {<<: *default, id: supply_chain, title: Supply Chain}
+  - {<<: *default, id: inventory, title: Inventory}
+  - {<<: *default, id: demand_forecasting, title: Demand Forecasting}
+  - {<<: *default, id: channel_conflict, title: Channel Conflict}
+  - {<<: *default, id: market_sizing, title: Market Sizing}
+  - {<<: *default, id: TAM_SAM_SOM, title: TAM SAM SOM}
+  - {<<: *default, id: customer_acquisition, title: Customer Acquisition}
+  - {<<: *default, id: retention, title: Retention}
+  - {<<: *default, id: lifetime_value, title: Lifetime Value}
+  - {<<: *default, id: business_case, title: Business Case}
